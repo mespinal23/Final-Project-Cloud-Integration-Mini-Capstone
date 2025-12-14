@@ -4,7 +4,7 @@
 
 Oncology infusion centers face ongoing challenges with chemotherapy scheduling due to limited nursing availability, fluctuating daily capacity, and inaccurate chair time estimates. Schedulers coordinate appointments for over 90 active chemotherapy patients. Because of limited nurse staffing, some patients remain unscheduled until the day before treatment and depend on last-minute cancellations to get an appointment.
 
-Scheduled chair times often do not reflect actual infusion duration. Variability in regimen complexity, preparation delays, and patient-specific factors can make treatments run shorter or longer than planned. This causes inefficient use of infusion chairs, overbooked days, and underutilized capacity on other days.
+Scheduled chair times often do not reflect actual infusion duration. Variability in regimen complexity, preparation delays, and patient needs can make treatments run shorter or longer than planned. This causes inefficient use of infusion chairs, overbooked days, and underutilized capacity on other days.
 
 This project introduces a cloud-based system to help with chemo scheduling and chair use. It aims to give schedulers, nurse managers, and clinic administrators a clearer view of capacity and more accurate chair-time estimates by providing summary analytics and capacity insights. This project does not contain any real personal information and is used only for educational purposes.
 
