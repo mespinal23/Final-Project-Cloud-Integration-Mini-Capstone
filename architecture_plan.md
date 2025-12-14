@@ -1,6 +1,6 @@
 # Architecture & Implementation Plan
 
-## High-Level Architecture Diagram
+## <ins>High-Level Architecture Diagram</ins>
 
 
 ```mermaid
