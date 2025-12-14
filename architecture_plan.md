@@ -1,22 +1,24 @@
 # Architecture & Implementation Plan
 
-## Overview
+## <ins>Overview</ins>
 
-This architecture supports a cloud-based chemo scheduling and chair utilization support system designed to address operational challenges in an oncology infusion center. The solution integrates cloud storage, compute, databases, and analytics services to improve visibility into nurse capacity constraints and inaccuracies in chemotherapy chair-time estimates. The system is designed for educational purposes and uses only synthetic or de-identified data.
+This architecture supports a cloud-based chemo scheduling and chair utilization support system designed to address operational challenges in an oncology infusion center. The solution integrates cloud storage, compute, databases, and analytics services to improve visibility into nurse capacity constraints and inaccuracies in chemotherapy chair-time estimates. The system is designed for educational purposes and does not contain any real personal information.
 
 ---
 
-## Service Mapping
+## <ins>Service Mapping</ins>
 
-| Layer          | Cloud Service (GCP Example)       | Role in Solution                                                                  | Related Course Module/Assignment |
-| -------------- | --------------------------------- | --------------------------------------------------------------------------------- | -------------------------------- |
-| Frontend / API | Flask application (containerized) | Provides an interface for schedulers to upload CSV files and view summary results | Web / API module                 |
-| Compute        | Cloud Run                         | Runs the containerized Flask application and data-processing logic                | Containers / Serverless Compute  |
-| Storage        | Cloud Storage                     | Stores raw uploaded CSV files (scheduling, chair time, nurse capacity)            | Cloud Storage assignment         |
-| Database       | Cloud SQL (PostgreSQL)            | Stores cleaned and structured scheduling and utilization data                     | SQL / Databases module           |
-| Analytics      | Vertex AI Notebook                | Performs exploratory analytics on chair-time accuracy and capacity utilization    | Analytics / Notebooks module     |
+| Layer | Service (GCP) | Role in Solution | Related Course Module / Assignment |
+|------|---------------|------------------|------------------------------------|
+| Frontend / Access | Flask Web App | Allows schedulers to upload scheduling data and view summary metrics | Assignment 2: VMs and Networking with Flask |
+| Compute (Container) | Cloud Run | Runs the containerized Flask application and data processing logic | Assignment 3: Serverless |
+| Storage | Cloud Storage | Stores raw CSV files containing chemo scheduling and chair-time data | Assignment 1: Intro to Cloud GCP and OCI |
+| Database (SQL) | Cloud SQL (MySQL) | Stores cleaned encounter-level scheduling data and utilization tables | Assignment 4: Managed versus Manual Deployment of MySQL |
+| Analytics | Vertex AI Notebook | Performs chair utilization analysis and summary reporting | Azure Fundamentals: Describe Azure Architecture and Services |
 
-> *Note: An equivalent Azure implementation could use Azure App Service or Container Apps, Azure Blob Storage, Azure SQL Database, and Azure ML Notebooks.*
+
+> [!NOTE]
+> An equivalent Azure implementation could use Azure App Service or Container Apps, Azure Blob Storage, Azure SQL Database, and Azure ML Notebooks.*
 
 ---
 
