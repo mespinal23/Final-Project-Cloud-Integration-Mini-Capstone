@@ -1,6 +1,6 @@
-## Use Case: Cloud-Based Chemo Scheduling & Chair Utilization Support
+# Cloud-Based Chemo Scheduling & Chair Utilization Support
 
-### <ins>Problem</ins>
+## <ins>Problem</ins>
 
 Oncology infusion centers face ongoing challenges with chemotherapy scheduling due to limited nursing availability, fluctuating daily capacity, and inaccurate chair time estimates. Schedulers coordinate appointments for over 90 active chemotherapy patients. Because of limited nurse staffing, some patients remain unscheduled until the day before treatment and depend on last-minute cancellations to get an appointment.
 
@@ -8,13 +8,13 @@ Scheduled chair times often do not reflect actual infusion duration. Variability
 
 This project introduces a cloud-based system to help with chemo scheduling and chair use. It aims to give schedulers, nurse managers, and clinic administrators a clearer view of capacity and more accurate chair-time estimates by providing summary analytics and capacity insights. This project does not contain any real personal information and is used only for educational purposes.
 
-### <ins>Users</ins>
+## <ins>Users</ins>
 
 * **Schedulers:** Upload scheduling data and identify days with capacity risk.
 * **Nurse Managers:** Review staffing capacity and chair utilization trends.
 * **Clinic Administrators:** Monitor operational efficiency and planning metrics.
 
-### <ins>Data Sources</ins>
+## <ins>Data Sources</ins>
 
 The system uses simple, structured datasets commonly found in oncology operations:
 
@@ -35,7 +35,7 @@ The system uses simple, structured datasets commonly found in oncology operation
 > [!NOTE]
 > **All patient identifiers are fictitious and no protected health information (PHI) is included.**
 
-### <ins>Basic Workflow</ins>
+## <ins>Basic Workflow</ins>
 
 1. A scheduler uploads updated scheduling, chair-time, and nurse capacity CSV files through a simple web interface or API.
 2. Raw files are stored securely in cloud object storage.
