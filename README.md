@@ -26,7 +26,7 @@ This is a learning tool that uses data created for practice. It does not contain
 
 - Frontend / access layer
  
-- Compute layer*
+- Compute layer
 
 - Data layer 
 
