@@ -39,34 +39,34 @@ This architecture supports a cloud-based chemo scheduling and chair utilization 
 
 
 > [!NOTE]
-> An equivalent Azure implementation could use Azure App Service or Container Apps, Azure Blob Storage, Azure SQL Database, and Azure ML Notebooks.*
+> While this project is implemented using GCP services, a similar solution could be built on Azure using comparable services such as Azure App Service or Container Apps, Azure Blob Storage, Azure SQL Database, and Azure ML Notebooks.
 
 ---
 
 ## <ins>Data Flow Narrative</ins>
 
-1. A scheduler or administrator accesses the Flask web application to upload updated CSV files containing chemotherapy schedules, actual chair-time data, and nurse staffing capacity.
-2. Uploaded files are saved to Cloud Storage as raw source data for traceability and auditing.
-3. A containerized service running on Cloud Run validates the files, checks for formatting issues, and calculates differences between scheduled and actual chair time.
-4. Cleaned and transformed data is loaded into Cloud SQL tables for structured querying and reporting.
-5. A Vertex AI Notebook connects securely to the SQL database to compute summary metrics, such as average chair-time variance, utilization percentages, and days at risk for overbooking.
-6. Aggregated results are either written back to the database or exposed through the Flask application for display in simple tables or charts.
+1. A scheduler or administrator uses the Flask web app to upload new CSV files with chemotherapy schedules, actual chair-time data, and nurse staffing levels.
+2. The uploaded files are stored in Cloud Storage as raw data, making it easy to trace and audit changes.
+3. A containerized service on Cloud Run checks the files for errors, validates their format, and compares the scheduled chair time with actual usage.
+4. After cleaning and transforming the data, it is loaded into Cloud SQL tables for structured querying and reporting.
+5. A Vertex AI Notebook securely connects to the SQL database to compute summary metrics, such as average chair-time variance, utilization percentages, and days at risk of overbooking.
+6. The collected results are either written back to the database or exposed through the Flask application for display in simple tables or charts.
 
-This flow demonstrates a complete, end-to-end cloud pipeline from data ingestion to analytics and visualization.
+This process shows a full cloud pipeline, covering everything from data collection to analytics and visualization.
 
 ---
 
 ## <ins>Security, Identity, and Governance Considerations</ins>
 
-Security is addressed at a high level using cloud-native identity and access management. Service accounts are used to allow Cloud Run and analytics notebooks to access Cloud Storage and Cloud SQL without hard-coded credentials. Sensitive configuration values, such as database connection strings, are stored as environment variables.
+Security in this project is managed using built-in cloud identity and access controls. Usernames and passwords are not stored in the application. Instead, cloud service accounts enable components such as Cloud Run and analytics notebooks to securely access Cloud Storage and Cloud SQL. Sensitive configuration details, such as database connection information, are managed via environment variables rather than hardcoding.
 
-Access is restricted using role-based access control (RBAC), ensuring that only authorized users or services can upload data or view analytics. To avoid compliance risks, all data used in this project is synthetic or de-identified, and no real patient identifiers or protected health information (PHI) are included. This design reflects best practices for healthcare data governance in non-production environments.
+The system uses role-based permissions, so only approved users or services can upload scheduling data or see analytical results. To prevent compliance or privacy issues, the project data does not include any real personal information and is used only for educational purposes. This method follows standard healthcare best practices for building or testing systems outside of production.
 
 ---
 
 ## <ins>Cost and Operational Considerations</ins>
 
-To keep costs low and suitable for a student or free-tier environment, the solution relies on serverless and managed services where possible. Cloud Run scales automatically and only incurs costs when the application is actively used. Cloud Storage costs are minimal due to the small size of CSV files, and Cloud SQL can be configured using a basic instance for demonstration purposes.
+To keep costs low and fit the project’s needs, the design uses serverless and managed cloud services. Cloud Run scales up or down based on use, so you only pay when the app runs. Cloud Storage remains inexpensive because the scheduling files are small, and Cloud SQL can run on a minimal setup for demos.
 
-Analytics notebooks are started only when needed and shut down when idle to avoid unnecessary charges. This architecture avoids always-on virtual machines, reducing operational overhead while still demonstrating realistic cloud integration patterns used in healthcare organizations.
+Analytics notebooks start only when analysis is needed and can be shut down when not in use, which helps avoid unnecessary costs. By avoiding always-on virtual machines, this design minimizes operational overhead while still demonstrating realistic cloud deployment patterns used in healthcare organizations.
 
