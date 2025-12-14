@@ -2,9 +2,9 @@
 
 ##  <ins>Areas of Confidence</ins>
 
-The part of this project I felt most confident about was defining the problem and explaining why it matters. Chemotherapy scheduling and chair utilization are challenges I see regularly, so translating those issues into a use case felt very natural. It was easy to identify realistic data sources, such as nurse staffing levels, scheduled chair time, and actual infusion duration, and to explain how these factors contribute to last‑minute scheduling and inefficiencies.
+The part of this project I felt most confident about was defining the problem and explaining why it matters in a real clinical setting. Chemotherapy scheduling and chair utilization are challenges I see regularly, so turning those day-to-day issues into a use case felt very natural. The problem is not hypothetical for me; it directly affects patients, schedulers, and nursing staff. Because of that, it was easy to identify realistic data sources such as nurse staffing levels, scheduled chair time, and actual infusion duration, and to clearly explain how inaccuracies in these areas contribute to last-minute scheduling, unused capacity, and added stress for both staff and patients.
 
-I also felt comfortable outlining the overall data flow and selecting cloud services that fit the problem. Using serverless compute, cloud storage, and a managed database made sense from both a healthcare operations and a cost perspective, and those choices aligned well with concepts covered in the course.
+I was also comfortable mapping out the overall data flow and selecting cloud services that fit the needs of this problem. Thinking through how data would move from intake to storage, processing, and analysis felt intuitive, especially since we covered similar patterns throughout the course. Using serverless compute, cloud storage, and a managed database made sense not only from a technical standpoint but also from an operational and cost perspective. These choices reflect how healthcare organizations often approach cloud solutions: focusing on scalability, reliability, and minimizing overhead. Overall, this part of the project allowed me to connect course concepts directly to a real-world healthcare workflow that I already understand well.
 
 ## <ins>Areas of Uncertainty</ins>
 
