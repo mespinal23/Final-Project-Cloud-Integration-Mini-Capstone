@@ -43,7 +43,7 @@ This architecture supports a cloud-based chemo scheduling and chair utilization 
 
 ---
 
-## Data Flow Narrative
+## <ins>Data Flow Narrative</ins>
 
 1. A scheduler or administrator accesses the Flask web application to upload updated CSV files containing chemotherapy schedules, actual chair-time data, and nurse staffing capacity.
 2. Uploaded files are saved to Cloud Storage as raw source data for traceability and auditing.
@@ -56,7 +56,7 @@ This flow demonstrates a complete, end-to-end cloud pipeline from data ingestion
 
 ---
 
-## Security, Identity, and Governance Considerations
+## <ins>Security, Identity, and Governance Considerations</ins>
 
 Security is addressed at a high level using cloud-native identity and access management. Service accounts are used to allow Cloud Run and analytics notebooks to access Cloud Storage and Cloud SQL without hard-coded credentials. Sensitive configuration values, such as database connection strings, are stored as environment variables.
 
@@ -64,7 +64,7 @@ Access is restricted using role-based access control (RBAC), ensuring that only 
 
 ---
 
-## Cost and Operational Considerations
+## <ins>Cost and Operational Considerations</ins>
 
 To keep costs low and suitable for a student or free-tier environment, the solution relies on serverless and managed services where possible. Cloud Run scales automatically and only incurs costs when the application is actively used. Cloud Storage costs are minimal due to the small size of CSV files, and Cloud SQL can be configured using a basic instance for demonstration purposes.
 
