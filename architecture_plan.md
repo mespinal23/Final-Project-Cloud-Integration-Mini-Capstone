@@ -1,5 +1,22 @@
 # Architecture & Implementation Plan
 
+## High-Level Architecture Diagram
+
+
+
+```mermaid
+graph TD
+    A[Schedulers / Admin Users] --> B[Flask Web App - Frontend / Access Layer]
+    B --> C[Cloud Run - Containerized Compute]
+    C --> D[Cloud Storage - Raw Scheduling CSVs]
+    C --> E[Cloud SQL - Encounter & Chair Utilization Tables]
+    E --> F[Vertex AI Notebook - Analytics]
+    F --> E
+    F --> B
+```
+
+
+
 ## <ins>Overview</ins>
 
 This architecture supports a cloud-based chemo scheduling and chair utilization support system designed to address operational challenges in an oncology infusion center. The solution integrates cloud storage, compute, databases, and analytics services to improve visibility into nurse capacity constraints and inaccuracies in chemotherapy chair-time estimates. The system is designed for educational purposes and does not contain any real personal information.
