@@ -1,5 +1,6 @@
 # Cloud Integration Mini-Capstone: Chemo Scheduling Support
-## Overview 
+## <ins>Overview</ins>
+
 
 This repository contains the final Cloud Integration Mini-Capstone Project focused on chemotherapy scheduling and infusion chair utilization challenges in an oncology setting. This project demonstrates how cloud services can be integrated to support operational decision-making related to nurse capacity constraints and inaccurate chemotherapy chair-time estimates.
 
@@ -7,7 +8,7 @@ This is a learning tool that uses data created for practice. It does not contain
 
 **Cloud Platform Used:** Google Cloud Platform (GCP) 
 
-## Project Deliverables 
+## <ins>Project Deliverables</ins>
 ### 1. Use Case Description
 * Problem statement
 * Data sources
