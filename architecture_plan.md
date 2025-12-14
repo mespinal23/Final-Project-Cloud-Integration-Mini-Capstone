@@ -3,14 +3,18 @@
 ## High-Level Architecture Diagram
 
 
-
 ```mermaid
 graph TD
-    A[Schedulers / Admin Users] --> B[Flask Web App - Frontend / Access Layer]
-    B --> C[Cloud Run - Containerized Compute]
-    C --> D[Cloud Storage - Raw Scheduling CSVs]
-    C --> E[Cloud SQL - Encounter & Chair Utilization Tables]
-    E --> F[Vertex AI Notebook - Analytics]
+    A[Schedulers / Admin Users] --> B[Flask Web App - Frontend
+/ Access Layer]
+    B --> C[Cloud Run - Containerized
+Compute]
+    C --> D[Cloud Storage -
+Raw Scheduling CSVs]
+    C --> E[Cloud SQL - Encounter
+& Chair Utilization Tables]
+    E --> F[Vertex AI Notebook
+- Analytics]
     F --> E
     F --> B
 ```
