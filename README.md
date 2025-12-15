@@ -38,19 +38,15 @@ This is a learning tool that uses data created for practice. It does not contain
 
 ### 3. Architecture & Implementation Plan 
 
-The plan includes:
+**The plan includes:**
 
-1. **Service mapping**
+1. Service mapping
 
-   A table that lists at least 3–4 distinct services.
+2. Data flow narrative
 
-2. **Data flow narrative**
+3. Security, identity, and governance basics
 
-   A short narrative describing the end-to-end flow.
-
-3. **Security, identity, and governance basics**
-
-4. **Cost and operational considerations**
+4. Cost and operational considerations
 
 **Deliverable file:**
 
